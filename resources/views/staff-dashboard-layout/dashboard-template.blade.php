@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>DreamSpace Leave Manegement</title>
+    <title>IBS Leave Manegement</title>
 
     <!-- Custom fonts for this template-->
     <link href="{{asset('dashboard-template')}}/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -32,7 +32,7 @@
 
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center">
-                <div class="sidebar-brand-text mx-3">DreamSpace Academy</div>
+                <div class="sidebar-brand-text mx-3">Ingenuity Business Solutions</div>
             </a>
 
             <!-- Divider -->
@@ -87,7 +87,7 @@
             <div id="content">
 
                 <!-- Topbar -->
-                <nav style="background-color:#FE6500 !important;"  class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+                <nav style="background-color:#0000FF !important;"  class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
 
                     <!-- Sidebar Toggle (Topbar) -->
                     <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
@@ -121,11 +121,11 @@
             <!-- End of Main Content -->
 
             <!-- Footer -->
-            <footer style="background-color:#FE6500 !important;" class="sticky-footer">
+            <footer style="background-color:#0000FF;" class="sticky-footer">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
                         <span style="color: white; font-size: 16px;">
-                            &copy; Copyright DreamSpace Academy | All rights reserved | Co-created by <a style="color:#56509f; font-weight:bold;" href="https://www.linkedin.com/in/gunarakulan-gunaretnam-161119156/" target="_blank">Gunarakulan</a>
+                            &copy; Ingenuity Business Solutions | All rights reserved <!--a style="color:#56509f; font-weight:bold;" href="https://www.linkedin.com/in/gunarakulan-gunaretnam-161119156/" target="_blank">Gunarakulan</a-->
                         </span>
                     </div>
                 </div>

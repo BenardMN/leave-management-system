@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>DreamSpace Leave Manegement</title>
+    <title>IBS Leave Manegement</title>
 
     <!-- Custom fonts for this template-->
     <link href="{{asset('dashboard-template')}}/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -32,7 +32,7 @@
 
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center">
-                <div class="sidebar-brand-text mx-3">DreamSpace Academy</div>
+                <div class="sidebar-brand-text mx-3">Ingenuity Business Solutions</div>
             </a>
 
             <!-- Divider -->
@@ -139,7 +139,7 @@
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
                         <span>
-                            &copy; Copyright DreamSpace Academy | All rights reserved | Co-created by <a style="color:#56509f; font-weight:bold;" href="https://www.linkedin.com/in/gunarakulan-gunaretnam-161119156/" target="_blank">Gunarakulan</a>
+                            &copy; Ingenuity Business Solutions | All rights reserved <!--a style="color:#56509f; font-weight:bold;" href="https://www.linkedin.com/in/gunarakulan-gunaretnam-161119156/" target="_blank">Gunarakulan</a-->
                         </span>
                     </div>
                 </div>

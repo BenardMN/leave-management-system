@@ -2,9 +2,12 @@
 
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
-use Redirect;
-use Session;
-use DB;
+use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Redirect;
+//use Redirect;
+//use Session;
+//use DB;
 
 class PageController extends Controller
 {
@@ -144,7 +147,7 @@ class PageController extends Controller
 
       return view("admin-dashboard-content/leave-management-page-1-index")->with(["staff_basic_data"=>$staff_basic_data,"leave_data" => $leave_data, "filter_options" => ["staff_id" => "Select a staff","type_of_leave" => "All", "year" => "All", "month" => "All", "status" => "All"]]); //Send staff data with it.
 
-    }else{
+    } else{
 
       return Redirect::to("/");
 
@@ -290,7 +293,7 @@ class PageController extends Controller
        $session_value = Session::get('Session_Value');
 
        $staff_basic_data = DB::table('staff_data')->select("firstname", "lastname")->where(["staff_id" => $session_value])->get();
-       $leave_data = DB::table('leave_data')->where(["approval_status" => "[ACCEPTED]"])->orWhere("approval_status", "[DECLINED]")->orderBy('date_of_request', 'DESC')->get();
+       $leave_data = DB::table('leave_data')->where(["staff_id" => $session_value])->orderBy('date_of_request', 'DESC')->get();
 
        return view("staff-dashboard-content/my-leave-history")->with(["staff_basic_data" =>$staff_basic_data,"leave_data" => $leave_data,"filter_options" => ["type_of_leave" => "All", "year" => "All", "month" => "All", "status" => "All"]]); //Send staff data with it.
 
@@ -319,46 +322,46 @@ class PageController extends Controller
 
       if($type_of_leave == "All" && $year == "All" && $month == "All" && $status == "All"){
 
-        $SqlCode = "SELECT * FROM leave_data WHERE approval_status  = '[ACCEPTED]' OR approval_status = '[DECLINED]' ORDER BY 'DESC'";
+        $SqlCode = "SELECT * FROM leave_data WHERE (approval_status  = '[ACCEPTED]' OR approval_status = '[DECLINED]') AND staff_id = $session_value  ORDER BY 'DESC'";
 
       }else if($type_of_leave != "All" && $year == "All" && $month == "All" && $status == "All"){
 
-        $SqlCode = "SELECT * FROM leave_data WHERE type_of_leave = '$type_of_leave' AND (approval_status = '[ACCEPTED]' OR approval_status = '[DECLINED]') ORDER BY 'DESC'";
+        $SqlCode = "SELECT * FROM leave_data WHERE type_of_leave = '$type_of_leave' AND (approval_status = '[ACCEPTED]' OR approval_status = '[DECLINED]') AND staff_id = $session_value ORDER BY 'DESC'";
 
       }else if($type_of_leave == "All" && $year != "All" && $month == "All" && $status == "All"){
 
-        $SqlCode = "SELECT * FROM leave_data WHERE date_of_leave LIKE '{$year}______%' AND (approval_status = '[ACCEPTED]' OR approval_status = '[DECLINED]') ORDER BY 'DESC'";
+        $SqlCode = "SELECT * FROM leave_data WHERE date_of_leave LIKE '{$year}______%' AND (approval_status = '[ACCEPTED]' OR approval_status = '[DECLINED]') AND staff_id = $session_value ORDER BY 'DESC'";
 
       }else if($type_of_leave == "All" && $year != "All" && $month != "All" && $status == "All"){
 
-        $SqlCode = "SELECT * FROM leave_data WHERE date_of_leave LIKE '%{$year}_{$month}___%' AND (approval_status = '[ACCEPTED]' OR approval_status = '[DECLINED]') ORDER BY 'DESC'";
+        $SqlCode = "SELECT * FROM leave_data WHERE date_of_leave LIKE '%{$year}_{$month}___%' AND (approval_status = '[ACCEPTED]' OR approval_status = '[DECLINED]') AND staff_id = $session_value ORDER BY 'DESC'";
       }else if($type_of_leave == "All" && $year == "All" && $month == "All" && $status != "All"){
 
-        $SqlCode = "SELECT * FROM leave_data WHERE approval_status = '$status' ORDER BY 'DESC'";
+        $SqlCode = "SELECT * FROM leave_data WHERE approval_status = '$status' AND staff_id = $session_value ORDER BY 'DESC'";
 
       }else if($type_of_leave != "All" && $year != "All" && $month == "All" && $status == "All"){
 
-        $SqlCode = "SELECT * FROM leave_data WHERE (date_of_leave LIKE '%{$year}______%' AND type_of_leave = '$type_of_leave') AND (approval_status = '[ACCEPTED]' OR approval_status = '[DECLINED]') ORDER BY 'DESC'";
+        $SqlCode = "SELECT * FROM leave_data WHERE (date_of_leave LIKE '%{$year}______%' AND type_of_leave = '$type_of_leave') AND (approval_status = '[ACCEPTED]' OR approval_status = '[DECLINED]') AND staff_id = $session_value ORDER BY 'DESC'";
 
       }else if($type_of_leave != "All" && $year != "All" && $month != "All" && $status == "All"){
 
-        $SqlCode = "SELECT * FROM leave_data WHERE (date_of_leave LIKE '%{$year}_{$month}___%' AND type_of_leave = '$type_of_leave') AND (approval_status = '[ACCEPTED]' OR approval_status = '[DECLINED]') ORDER BY 'DESC'";
+        $SqlCode = "SELECT * FROM leave_data WHERE (date_of_leave LIKE '%{$year}_{$month}___%' AND type_of_leave = '$type_of_leave') AND (approval_status = '[ACCEPTED]' OR approval_status = '[DECLINED]') AND staff_id = $session_value ORDER BY 'DESC'";
 
       }else if($type_of_leave != "All" && $year != "All" && $month != "All" && $status != "All"){
 
-        $SqlCode = "SELECT * FROM leave_data WHERE (date_of_leave LIKE '%{$year}_{$month}___%' AND type_of_leave = '$type_of_leave' AND approval_status = '$status') AND (approval_status = '[ACCEPTED]' OR approval_status = '[DECLINED]') ORDER BY 'DESC'";
+        $SqlCode = "SELECT * FROM leave_data WHERE (date_of_leave LIKE '%{$year}_{$month}___%' AND type_of_leave = '$type_of_leave' AND approval_status = '$status') AND (approval_status = '[ACCEPTED]' OR approval_status = '[DECLINED]') AND staff_id = $session_value ORDER BY 'DESC'";
 
       }else if($type_of_leave != "All" && $year != "All" && $month == "All" && $status != "All"){
 
-        $SqlCode = "SELECT * FROM leave_data WHERE date_of_leave LIKE '%{$year}______%' AND type_of_leave = '$type_of_leave' AND approval_status = '$status' ORDER BY 'DESC'";
+        $SqlCode = "SELECT * FROM leave_data WHERE date_of_leave LIKE '%{$year}______%' AND type_of_leave = '$type_of_leave' AND approval_status = '$status' AND staff_id = $session_value ORDER BY 'DESC'";
 
       }else if($type_of_leave == "All" && $year != "All" && $month == "All" && $status != "All"){
 
-        $SqlCode = "SELECT * FROM leave_data WHERE date_of_leave LIKE '%{$year}______%' AND approval_status = '$status' ORDER BY 'DESC'";
+        $SqlCode = "SELECT * FROM leave_data WHERE date_of_leave LIKE '%{$year}______%' AND approval_status = '$status' AND staff_id = $session_value ORDER BY 'DESC'";
 
       }else if($type_of_leave == "All" && $year != "All" && $month != "All" && $status != "All"){
 
-        $SqlCode = "SELECT * FROM leave_data WHERE date_of_leave LIKE '%{$year}_{$month}___%' AND approval_status = '$status' ORDER BY 'DESC'";
+        $SqlCode = "SELECT * FROM leave_data WHERE date_of_leave LIKE '%{$year}_{$month}___%' AND approval_status = '$status' AND staff_id = $session_value ORDER BY 'DESC'";
 
       }else{
 
