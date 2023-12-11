@@ -85,7 +85,7 @@
     </div>
     <footer class="footer mt-auto py-3">
         <div class="container">
-            <p style="color: white; text-align:center">&copy;Ingenuity Business Solutions</p>
+            <p style="color: white; text-align:center">&copy; Ingenuity Business Solutions</p>
         </div>
     </footer>
       <script src="{{asset('login-template')}}/js/jquery.min.js"></script>
