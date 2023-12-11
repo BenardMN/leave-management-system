@@ -258,12 +258,16 @@
           <div class="card text-white bg-dark mb-3">
             @if($data->approval_status =="[ACCEPTED]")
               <div class="card-header bg-success">
-                <strong>{{$data->date_of_leave}} (Accepted)</strong>
+              From:&nbsp;<strong>{{$data->date_of_leave}}</strong>&nbsp;&nbsp;
+              TO:&nbsp;<strong>{{$data->last_date_of_leave}}</strong>&nbsp;&nbsp;
+              Employee ID:&nbsp;<strong>{{$data->staff_id}}</strong>
                 <i class="float-right" style="font-size:85%;">Request sent on :- {{$data->date_of_request}}</i>
               </div>
             @elseif($data->approval_status =="[DECLINED]")
               <div class="card-header bg-danger">
-                <strong>{{$data->date_of_leave}} (Declined)</strong>
+              From:&nbsp;<strong>{{$data->date_of_leave}}</strong>&nbsp;&nbsp;
+              TO:&nbsp;<strong>{{$data->last_date_of_leave}}</strong>&nbsp;&nbsp;
+              Employee ID:&nbsp;<strong>{{$data->staff_id}}</strong>
                 <i class="float-right" style="font-size:85%;">Request sent on :- {{$data->date_of_request}}</i>
               </div>
             @endif

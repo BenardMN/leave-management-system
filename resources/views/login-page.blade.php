@@ -10,8 +10,9 @@
       <link rel="stylesheet" href="{{asset('login-template')}}/css/style.css">
       <link rel="stylesheet" href="{{asset('login-template')}}/css/bootstrap.min.css">
    </head>
-   <body>
-   <div class="container-fluid " style="background-image: url(./images/bg.jpg);">
+   <body style="background-image: url(/login-template/images/bg.jpg); background-size: cover; background-position: center;">
+   <!-- <img src="{{asset('login-template')}}/images/bg.jpg"> -->
+   <div class="container-fluid ">
         <div class="container ">
             <div class="row ">
             @if($errors->any())
@@ -41,7 +42,7 @@
                             <div class="d-flex align-items-center justify-content-center">
                                 <img src="{{asset('login-template')}}/images/logo1.png">
                             </div>
-                            <h2 class="mb-3">Leave Management System</h2>
+                            <h2 class="mb-3">Password Login</h2>
                             <div class="text-box-cont mt-3">
                             <form action="handle-login" method="POST" class="login-form">
                               {{ csrf_field() }}
@@ -82,6 +83,11 @@
             </div>
         </div>
     </div>
+    <footer class="footer mt-auto py-3">
+        <div class="container">
+            <p style="color: white; text-align:center">&copy;Ingenuity Business Solutions</p>
+        </div>
+    </footer>
       <script src="{{asset('login-template')}}/js/jquery.min.js"></script>
       <script src="{{asset('login-template')}}/js/popper.js"></script>
       <script src="{{asset('login-template')}}/js/bootstrap.min.js"></script>

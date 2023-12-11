@@ -10302,7 +10302,8 @@ footer.sticky-footer {
   margin: 2rem 0 0 0;
   padding: 2rem 0;
   flex-shrink: 0;
-  background-color: #fff;
+  color: #fff;
+  background-color: #1DD1A6;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 footer.sticky-footer .copyright {

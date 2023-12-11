@@ -58,7 +58,7 @@
 
 <div class="card">
     <div class="card-body">
-      <h3 class="panel-title" style="text-align:center;">Requesting for leave</h3>
+      <h3 class="panel-title" style="text-align:center;">Request for leave</h3>
       <br>
 
       <form action="/insert-leave-data-of-staff-account" method="POST">
@@ -93,7 +93,7 @@
         </div>
 
         <div class="form-group row">
-          <label for="date_of_leave" class="col-sm-2 col-form-label">Date of Leave</label>
+          <label for="date_of_leave" class="col-sm-2 col-form-label">Start Date of Leave</label>
           <div class="col-sm-3">
               <input type="date" class="form-control" id="date_of_leave" name="date_of_leave" required>
           </div>

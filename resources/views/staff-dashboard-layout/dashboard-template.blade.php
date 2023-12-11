@@ -28,7 +28,7 @@
     <div id="wrapper">
 
         <!-- Sidebar -->
-        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+        <ul class="navbar-nav bg-gradient-dark sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center">
@@ -87,7 +87,7 @@
             <div id="content">
 
                 <!-- Topbar -->
-                <nav style="background-color:#56509f !important;"  class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+                <nav style="background-color:#1DD1A6 !important;"  class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
 
                     <!-- Sidebar Toggle (Topbar) -->
                     <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
@@ -121,7 +121,7 @@
             <!-- End of Main Content -->
 
             <!-- Footer -->
-            <footer style="background-color:#56509f;" class="sticky-footer">
+            <footer style="background-color:#1DD1A6;" class="sticky-footer">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
                         <span style="color: white; font-size: 16px;">
