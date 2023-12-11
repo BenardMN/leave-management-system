@@ -1,6 +1,6 @@
 # DreamSpace Leave Management System
 
-![](github-readme-content/banner-image-new.jpg)  
+![](github-readme-content/banner-image-new.png)  
 
 
 ## Introduction
@@ -55,7 +55,7 @@ This leave management system has two types of accounts those are admin login and
 - Staff login
 - Login error popup messages
 
-![](github-readme-content/login-page-new.jpg)
+![](github-readme-content/banner-image-new.png)
 
 ### Admin - Dashboard
 
@@ -66,7 +66,7 @@ The admin dashboard shows up the requested leaves from staffs, here, admin can d
 - Accept leave requests
 - Decline leave requests
 
-![](github-readme-content/admin-dashboard.jpg)
+![](github-readme-content/admin-dashboard.png)
 
 
 ### Admin - Staff Management
@@ -80,7 +80,7 @@ This admin staff management is the place where the staff details are stored and 
 - Display staff details
 - Proper popup messages for deletion, update and Insertion.
 
-![](github-readme-content/staff-management.jpg)
+![](github-readme-content/staff-management.png)
 
 ### Admin - Leave Management
 
@@ -113,7 +113,7 @@ This admin setting module is the place where the admin password and username cou
 - Change password of admin
 
 
-![](github-readme-content/admin-settings.jpg)
+![](github-readme-content/admin-settings.png)
 
 
 ### Staff - Dashboard
@@ -146,16 +146,5 @@ This staff setting module is the place where the staff password and username cou
 - Change password of admin
 
 
-![](github-readme-content/staff-settings.jpg)
-
-
-
-Social Media Links
----
-
-* [Linkedin Profile](https://www.linkedin.com/in/gunarakulangunaretnam/)
-* [Facebook Page](https://www.facebook.com/gunarakulangunaretnam)
-* [Twitter Profile](https://twitter.com/gunarakulang)
-* [Instagram Profile](https://www.instagram.com/gunarakulangunaretnam/)
-* [Youtube Channel](https://www.youtube.com/channel/UCMWkED5sabgVZSCKjZuRJXA)
+![](github-readme-content/staff-settings.png)
 
