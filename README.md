@@ -1,4 +1,4 @@
-# DreamSpace Leave Management System
+# Leave Management System
 
 ![](github-readme-content/banner-image-new.png)  
 
