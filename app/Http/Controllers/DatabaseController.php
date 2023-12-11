@@ -422,24 +422,49 @@ class DatabaseController extends Controller
          'type_of_leave' => 'required',
          'description' => 'required',
          'date_of_leave' => 'required',
+         'last_date_of_leave' => 'required',
        ]);
 
        $staff_id          =  $session_value;
        $type_of_leave     =  $request->type_of_leave;
        $description       =  $request->description;
        $date_of_leave     =  $request->date_of_leave;
+       $last_date_of_leave = $request->last_date_of_leave;
        $date_of_request   =  date('Y-m-d H:i:s');
        $approval_status	  =  "[PENDING]";
 
 
-       if(DB::insert('INSERT INTO leave_data (staff_id, type_of_leave, description, date_of_leave, date_of_request, approval_status ) values (?, ?, ?, ?, ?, ?)', [$staff_id, $type_of_leave, $description, $date_of_leave, $date_of_request, $approval_status])){
+       if(DB::insert('INSERT INTO leave_data (staff_id, type_of_leave, description, date_of_leave, last_date_of_leave, date_of_request, approval_status ) values (?, ?, ?, ?, ?, ?, ?)', [$staff_id, $type_of_leave, $description, $date_of_leave, $last_date_of_leave, $date_of_request, $approval_status])){
 
            return redirect()->back()->with('message', 'Leave request has been submited successfully.');
 
        }
-
      }
    }
+
+  //  public function UpdateLeaveDaysRemaining(){
+  //   //$session_type = Session::get('Session_Type');
+  //   $session_value = Session::get('Staff');
+
+  //   // Retrieve the total leave days taken by the employee from the leave_data table
+  //   $totalLeaveDaysTaken = DB::table('leave_data')
+  //   ->where('staff_id', $session_value)
+  //   ->sum(DB::raw('DATEDIFF(end_date, start_date) + 1'));
+
+  //   // Update leave_days_remaining in the user_account table
+  //   $affectedRows = DB::table('user_account')
+  //   ->where('staff_id', $session_value)
+  //   ->update([
+  //       'leave_days_remaining' => DB::raw('leave_days_remaining - ' . $totalLeaveDaysTaken),
+  //   ]);
+
+  //   // Check if the update was successful
+  //   if ($affectedRows > 0) {
+  //     return response()->json(['message' => 'Leave days updated successfully']);
+  //   } else {
+  //     return response()->json(['message' => 'Failed to update leave days'], 500);
+  //   }
+  //  }
 
    public function DeleteLeavePendingRequestInStaffAccount($auto_id){
 

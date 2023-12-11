@@ -21,6 +21,7 @@ class LeaveData extends Migration
         $table->string('type_of_leave');
         $table->string('description',5000);
         $table->date('date_of_leave');
+        $table->date('last_date_of_leave');
         $table->datetime('date_of_request');
         $table->string('approval_status');
 

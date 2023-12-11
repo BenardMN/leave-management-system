@@ -48,6 +48,13 @@
 
 @endif
 
+<div class="card">
+  <div class="card-body">
+    <h3 class="panel-title" style="text-align: center;">Days Available</h3>
+    <br>
+    <h4 class="panel-title" style="text-align: center;">21 days</h4>
+  </div>
+</div>
 
 <div class="card">
     <div class="card-body">
@@ -87,8 +94,12 @@
 
         <div class="form-group row">
           <label for="date_of_leave" class="col-sm-2 col-form-label">Date of Leave</label>
-          <div class="col-sm-4">
+          <div class="col-sm-3">
               <input type="date" class="form-control" id="date_of_leave" name="date_of_leave" required>
+          </div>
+          <label for="last_date_of_leave" class="col-sm-2 col-form-label">End Date of Leave</label>
+          <div class="col-sm-3">
+              <input type="date" class="form-control" id="last_date_of_leave" name="last_date_of_leave" required>
           </div>
         </div>
 
@@ -115,7 +126,8 @@
 
           <div class="card text-white bg-dark mb-3">
             <div class="card-header bg-dark ">
-              <strong>{{$data->date_of_leave}}</strong>
+              From:&nbsp;<strong>{{$data->date_of_leave}}</strong>&nbsp;&nbsp;
+              TO:&nbsp;<strong>{{$data->last_date_of_leave}}</strong>
               <i class="float-right" style="font-size:85%;">Request sent on :- {{$data->date_of_request}}</i>
             </div>
             <div class="card-body">

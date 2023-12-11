@@ -3,6 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use Illuminate\Support\Facades\DB;
 
 class UserAccount extends Migration
 {
@@ -20,6 +21,7 @@ class UserAccount extends Migration
         $table->string('username');
         $table->string('password');
         $table->string('account_type');
+        $table->integer('leave_days_remaining')->default('21');
 
       });
 

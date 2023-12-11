@@ -70,6 +70,8 @@ Route::post('/change-password-of-staff-account',[DatabaseController::class, 'Cha
 
 Route::post('/insert-leave-data-of-staff-account',[DatabaseController::class, 'InsertLeaveDataOfStaffAccount']);
 
+//Route::post('/update-leave-days-remaining-of-staff-account',[DatabaseController::class, 'UpdateLeaveDaysRemaining']);
+
 Route::get('/delete-leave-pending-request-in-staff-account/{auto_id}',[DatabaseController::class, 'DeleteLeavePendingRequestInStaffAccount']);
 
 Route::get('/view-my-leave-history-of-staff-account',[PageController::class, 'ViewMyLeaveHistoryPageOfStaffAccountController']);
