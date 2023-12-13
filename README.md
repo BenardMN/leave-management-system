@@ -21,7 +21,7 @@ This management system is written in Laravel framework. The database is written 
 ### Database Migrations
 
 #### Step 1:
-- Create an empty database in the MySQL with the name of **dsa_leave_management**
+- Create an empty database in the MySQL with the name of **leave_management**
 
 ![](github-readme-content/create-database.jpg)  
 
